@@ -1,0 +1,25 @@
+.pageHeader {
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: center;
+}
+
+.otisHeader {
+	float: left;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 19em;
+	width: auto;
+}
+
+.otisPicture {
+	border-radius: 25%;
+	float: left;
+	height: 15em;
+	width: auto;
+}
+
+.otisText {
+	padding-left: 11em;
+	padding-right: 1em;
+}

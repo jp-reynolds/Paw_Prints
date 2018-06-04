@@ -8,17 +8,20 @@ class Header extends Component {
     	<Navbar>
 	  		<Navbar.Header>
     			<Navbar.Brand>
-      				<a href="#home">Paw Prints</a>
+      				<a href="/"><i className="fas fa-paw"></i> Paw Prints</a>
     			</Navbar.Brand>
   			</Navbar.Header>
 	  		<Nav pullRight>
-	  	  		<NavItem eventKey={1} href="#">
+	  	  		<NavItem eventKey={1} href="/park">
+	  	  			<p className="glyphicon glyphicon-tree-deciduous"></p>
 	      			Park
 	    		</NavItem>
-	    		<NavItem eventKey={2} href="#">
+	    		<NavItem eventKey={2} href="/hike">
+	    			<p className="glyphicon glyphicon-tree-conifer"></p>
 	     			Hike
 	    		</NavItem>
-	    		<NavItem eventKey={3} href="#">
+	    		<NavItem eventKey={3} href="/camp">
+	    			<p className="glyphicon glyphicon-tent"></p>
 	     			Camp
 	    		</NavItem>
 	  		</Nav>
