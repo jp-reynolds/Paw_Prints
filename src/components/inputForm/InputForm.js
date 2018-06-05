@@ -9,8 +9,8 @@ class InputForm extends Component {
     	super();
 	    this.state = {
         show: false,
-        catergory: "",
-        location: "",
+        type: "",
+        name: "",
         city: "",
         elevation: "",
         description: "",
@@ -19,8 +19,8 @@ class InputForm extends Component {
 
       this.handleShow = this.handleShow.bind(this);
       this.handleClose = this.handleClose.bind(this);
-      this.categoryChange = this.categoryChange.bind(this);
-      this.locationChange = this.locationChange.bind(this);
+      this.typeChange = this.typeChange.bind(this);
+      this.nameChange = this.nameChange.bind(this);
       this.cityChange = this.cityChange.bind(this);
       this.elevationChange = this.elevationChange.bind(this);
       this.descriptionChange = this.descriptionChange.bind(this);
@@ -44,15 +44,15 @@ class InputForm extends Component {
   //     });
   // }
 
-  categoryChange(event) {
+  typeChange(event) {
     this.setState({
-      category: event.target.value
+      type: event.target.value
     })
   }
 
-  locationChange(event) {
+  nameChange(event) {
     this.setState({
-      location: event.target.value,
+      name: event.target.value,
     })
   }
 
@@ -83,14 +83,19 @@ class InputForm extends Component {
   onFormModalSubmit(event) {
     event.preventDefault();
     let newPlace = {
-      newCategory: this.state.category,
-      newName: this.state.location,
-      newCity: this.state.city,
-      newElevation: this.state.elevation,
-      newDescription: this.state.description,
-      newImage: this.state.image
+      type: this.state.type,
+      name: this.state.name,
+      city: this.state.city,
+      elevation: this.state.elevation,
+      description: this.state.description,
+      image: this.state.image
     } 
-    console.log(newPlace)
+    console.log(newPlace);
+    axios.post("/api/places", newPlace).then(this.axiosCallback);
+  }
+
+  axiosCallback(results) {
+    console.log(results);
   }
 
   render() {
@@ -109,7 +114,8 @@ class InputForm extends Component {
               <form onSubmit={this.onFormModalSubmit}>
                 <FormGroup controlId="formControlsSelect">
                   <ControlLabel>Choose Category</ControlLabel>
-                  <FormControl componentClass="select" placeholder="select" value={this.state.category} onChange={this.categoryChange}>
+                  <FormControl componentClass="select" placeholder="select" value={this.state.type} onChange={this.typeChange}>
+                    <option value="Choose">Choose...</option>
                     <option value="park">Park</option>
                     <option value="hike">Hike</option>
                     <option value="camp">Camping spot</option>
@@ -120,10 +126,10 @@ class InputForm extends Component {
                   <ControlLabel>Location</ControlLabel>
                   <FormControl
                     type="text"
-                    value={this.state.location}
+                    value={this.state.name}
                     placeholder="Enter location name here..."
-                    onChange={this.locationChange}
-                    name='location'
+                    onChange={this.nameChange}
+                    name='name'
                   />
                 </FormGroup>
 
