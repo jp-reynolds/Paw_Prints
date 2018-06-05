@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import './InputForm.css';
-import { Modal, Button, Checkbox, Radio, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
+import { Modal, Button, ControlLabel, FormControl, FormGroup } from 'react-bootstrap';
 import axios from 'axios';
 
 class InputForm extends Component {
 
-	constructor(props, context) {
-    	super(props, context);
-
+	constructor() {
+    	super();
 	    this.state = {
-        show: false
+        show: false,
+        catergory: "",
+        location: "",
+        city: "",
+        elevation: "",
+        description: "",
+        image: "",
 	    };
 
       this.handleShow = this.handleShow.bind(this);
       this.handleClose = this.handleClose.bind(this);
+      this.categoryChange = this.categoryChange.bind(this);
+      this.locationChange = this.locationChange.bind(this);
+      this.cityChange = this.cityChange.bind(this);
+      this.elevationChange = this.elevationChange.bind(this);
+      this.descriptionChange = this.descriptionChange.bind(this);
+      this.imageChange = this.imageChange.bind(this);
+      this.onFormModalSubmit = this.onFormModalSubmit.bind(this);
 
 	}
 
@@ -26,16 +38,59 @@ class InputForm extends Component {
   }
 
 
-  componentDidMount(event){
-      this.setState({
+  // componentDidMount(event){
+  //     this.setState({
 
-      });
+  //     });
+  // }
+
+  categoryChange(event) {
+    this.setState({
+      category: event.target.value
+    })
   }
 
+  locationChange(event) {
+    this.setState({
+      location: event.target.value,
+    })
+  }
+
+  cityChange(event) {
+    this.setState({
+      city: event.target.value,
+    })
+  }
+
+  elevationChange(event) {
+    this.setState({
+      elevation: event.target.value,
+    })
+  }
+
+  descriptionChange(event) {
+    this.setState({
+      description: event.target.value,
+    })
+  }
+
+  imageChange(event) {
+    this.setState({
+      image: event.target.value,
+    })
+  }
 
   onFormModalSubmit(event) {
-    event.preventDefault() 
-
+    event.preventDefault();
+    let newPlace = {
+      newCategory: this.state.category,
+      newName: this.state.location,
+      newCity: this.state.city,
+      newElevation: this.state.elevation,
+      newDescription: this.state.description,
+      newImage: this.state.image
+    } 
+    console.log(newPlace)
   }
 
   render() {
@@ -51,10 +106,10 @@ class InputForm extends Component {
             <Modal.Title>Add new spot here...</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-              <form>
+              <form onSubmit={this.onFormModalSubmit}>
                 <FormGroup controlId="formControlsSelect">
                   <ControlLabel>Choose Category</ControlLabel>
-                  <FormControl componentClass="select" placeholder="select">
+                  <FormControl componentClass="select" placeholder="select" value={this.state.category} onChange={this.categoryChange}>
                     <option value="park">Park</option>
                     <option value="hike">Hike</option>
                     <option value="camp">Camping spot</option>
@@ -65,9 +120,10 @@ class InputForm extends Component {
                   <ControlLabel>Location</ControlLabel>
                   <FormControl
                     type="text"
-                    value={this.state.value}
+                    value={this.state.location}
                     placeholder="Enter location name here..."
-                    onChange={this.handleChange}
+                    onChange={this.locationChange}
+                    name='location'
                   />
                 </FormGroup>
 
@@ -75,9 +131,10 @@ class InputForm extends Component {
                   <ControlLabel>City</ControlLabel>
                   <FormControl
                     type="text"
-                    value={this.state.value}
+                    value={this.state.city}
                     placeholder="Enter city here..."
-                    onChange={this.handleChange}
+                    onChange={this.cityChange}
+                    name='city'
                   />
                 </FormGroup>
 
@@ -85,9 +142,10 @@ class InputForm extends Component {
                   <ControlLabel>Elevation</ControlLabel>
                   <FormControl
                     type="text"
-                    value={this.state.value}
+                    value={this.state.elevation}
                     placeholder="Enter elevation here..."
-                    onChange={this.handleChange}
+                    onChange={this.elevationChange}
+                    name='elevation'
                   />
                 </FormGroup>
 
@@ -95,7 +153,10 @@ class InputForm extends Component {
                   <ControlLabel>Description</ControlLabel>
                   <FormControl 
                     componentClass="textarea" 
-                    placeholder="Enter description here..." 
+                    placeholder="Enter description here..."
+                    value={this.state.description}
+                    onChange={this.descriptionChange}
+                    name='description'
                   />
                 </FormGroup>
 
@@ -103,13 +164,14 @@ class InputForm extends Component {
                   <ControlLabel>Image</ControlLabel>
                   <FormControl
                     type="text"
-                    value={this.state.value}
+                    value={this.state.image}
                     placeholder="Enter image URL here..."
-                    onChange={this.handleChange}
+                    onChange={this.imageChange}
+                    name='image'
                   />
                 </FormGroup>
 
-                <Button type="submit" pullRight>Submit</Button>
+                <Button type="submit">Submit</Button>
               </form>
           </Modal.Body>
           <Modal.Footer>
