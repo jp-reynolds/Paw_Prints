@@ -15,7 +15,6 @@ class Park extends Component {
 	}
 
 	componentDidMount() {
-    //https://marvelcu.herokuapp.com/api/heroes
 		axios.get("/api/places/park").then((results) => {
 			this.setState({
 				places: results
@@ -25,7 +24,6 @@ class Park extends Component {
 	}
 
   render() {
-
   	let listOfParks = this.state.places.data.map((parkObject, index) => {
   		return  <li className="parkObject" key = {index}>
   					<Place
