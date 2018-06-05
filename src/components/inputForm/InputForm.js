@@ -102,10 +102,13 @@ class InputForm extends Component {
 
     return (
     	<div>
-        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
-          Add new spot!
-        </Button>
-
+        <hr/>
+        <div>
+          <h4 className="addNewText">Share your travels here... </h4>
+          <Button className="addNewButton" bsStyle="info" bsSize="medium" onClick={this.handleShow}>
+            Add new spot!
+          </Button>
+        </div>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Add new spot here...</Modal.Title>

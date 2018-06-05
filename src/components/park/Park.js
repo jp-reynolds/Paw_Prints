@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Place from '../place/Place';
 import Weather from '../weather/Weather';
+import InputForm from '../inputForm/InputForm'
 import axios from 'axios'
 import './Park.css'
 
@@ -35,16 +36,14 @@ class Park extends Component {
 	  					image={parkObject.image}
 	  					comments={[parkObject.comments]}
 	  				/>
-	  				<Weather
-	  					city={parkObject.city}
-	  				/>
 				</li>
   	})
 
     return (
-    	<div className="parkContainer">
-        <p>This is the Parks page.</p>
-        <ul>{listOfParks}</ul>
+      <div className="parkContainer">
+        <h3 className="parkTitle">Parks page</h3>
+        <ul className="parkList">{listOfParks}</ul>
+        <InputForm/>
       </div>
     );
   }

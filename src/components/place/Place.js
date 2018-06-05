@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Place.css';
 import axios from 'axios';
+import Weather from '../weather/Weather';
 
 
 
@@ -40,10 +41,16 @@ class Place extends Component {
 		return (
 			<div>
 				<img className="placeImage" src={this.props.image}/>
-				<h4 className="placeName">{this.props.name}</h4>
-				<h4 className="placeCity">{this.props.city}</h4>
+          <div className="placeText">
+    				<h4 className="placeName">{this.props.name}</h4>
+    				<h5 className="placeCity">{this.props.city}</h5>
+            <h4 className="placeElevation">{this.props.elevation}</h4>
+            <Weather 
+              city={this.props.city}
+            />
+          </div>
 				<p className="placeDescription">{this.props.description}</p>
-				<h4 className="placeElevation">{this.props.elevation}</h4>
+        <hr/>
 			</div>
 
 		)

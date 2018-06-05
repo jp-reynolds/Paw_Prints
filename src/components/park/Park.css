@@ -1,0 +1,12 @@
+ul {
+	list-style: none;
+}
+
+.parkTitle {
+	text-align: center;
+}
+
+.parkList {
+	padding-right: 1em;
+	padding-left: 1em;
+}

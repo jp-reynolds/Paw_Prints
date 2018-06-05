@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Place from '../place/Place';
 import Weather from '../weather/Weather';
+import InputForm from '../inputForm/InputForm'
 import axios from 'axios'
 import './Hike.css'
 
@@ -35,16 +36,14 @@ class Hike extends Component {
 	  					image={hikeObject.image}
 	  					comments={[hikeObject.comments]}
 	  				/>
-	  				<Weather
-	  					city={hikeObject.city}
-	  				/>
 				</li>
   	})
 
     return (
     	<div className="parkContainer">
-        <p>This is the Hike page.</p>
-        <ul>{listOfHikes}</ul>
+        <h3 className="hikeTitle">Hike page.</h3>
+        <ul className="hikeList">{listOfHikes}</ul>
+        <InputForm/>
       </div>
     );
   }

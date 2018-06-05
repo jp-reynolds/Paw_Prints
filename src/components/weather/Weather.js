@@ -34,7 +34,7 @@ class Weather extends Component {
 
     return (
     	<div className="weatherContainer">
-        <p>{city}: {tempCity}˚ <img src={"http://openweathermap.org/img/w/" + iconCity + ".png"}/></p>
+        <h4>{tempCity}˚ <img src={"http://openweathermap.org/img/w/" + iconCity + ".png"}/></h4>
 
       </div>
     );

@@ -24,3 +24,15 @@
 	padding-right: 1em;
 	font-size: 1.4em;
 }
+
+.homeObject {
+	text-align: center;
+	padding: 1em;
+}
+
+.homeImage {
+    width: auto;
+    height: 18em;
+    border-radius: 25%;
+	opacity: 0.5;
+}
