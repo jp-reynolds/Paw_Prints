@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Place from '../place/Place';
+import Weather from '../weather/Weather';
 import axios from 'axios'
 import './Camp.css'
 
@@ -33,6 +34,9 @@ class Camp extends Component {
 	  					elevation={campObject.elevation}
 	  					image={campObject.image}
 	  					comments={[campObject.comments]}
+	  				/>
+	  				<Weather
+	  					city={campObject.city}
 	  				/>
 				</li>
   	})
