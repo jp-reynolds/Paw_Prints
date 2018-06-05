@@ -19,7 +19,7 @@ class Home extends Component {
          <div className="links">
             <a className="homeObject" href='/park'>
                 <div className="buttonContainer">
-                  <Image className="homeImage" id="park" src="http://www.screengeek.net/wp-content/uploads/2016/07/Marvel-Comics-Villains-List.jpg" />
+                  <Image className="homeImage" id="park" src="https://i.imgur.com/TW6Hz8J.jpg?1" />
                   <h1 className="centered"> Parks</h1>
                 </div>
             </a>
