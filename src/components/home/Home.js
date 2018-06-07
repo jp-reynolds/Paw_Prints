@@ -3,18 +3,23 @@ import { PageHeader, Image } from 'react-bootstrap';
 import InputForm from '../inputForm/InputForm'
 import './Home.css'
 
+//<div className="otisHeader">
+//<Image className="otisPicture" src="https://i.imgur.com/OVqUxJS.jpg?1" responsive />
+         // <h5 className="otisText">"Hey y'all! My name is Otis and my owner created this site so pups like me can play outside too!"</h5>
+//</div>
 class Home extends Component {
   render() {
     return (
     	<div className="homeContainer">
-    	    <PageHeader className="pageHeader">
-  			   <i className="fas fa-paw"></i>Paw Prints<i className="fas fa-paw"></i> <small>share dog-friendly locations in CO</small>
-		      </PageHeader>
-			   <div className="otisHeader">
-        	<Image className="otisPicture" src="https://i.imgur.com/OVqUxJS.jpg?1" responsive />
-        	<h5 className="otisText">"Hey y'all! My name is Otis and my owner created this site so pups like me can play outside too!"</h5>
+    	    <h1 className="pageHeader">
+  			   <img className="pageHeaderLogo" src="https://i.imgur.com/kBBiAwy.jpg" /> Paw Prints
+		      </h1>
+			   <h4 className="pageHeaderSlogan">Never leave your pup at home</h4>
+        	<Image responsive className="banner" src="https://i.imgur.com/1YXduuB.jpg"/>
+
+
          <InputForm/>
-         </div>
+         
 
          <div className="links">
             <a className="homeObject" href='/park'>

@@ -1,7 +1,28 @@
 .pageHeader {
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
 	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	font-weight: bold;
+	margin-bottom: 0;
+	font-size: 2.85em;
+}
+
+.pageHeaderLogo {
+	height: 1.5em;
+	width: 1.8em;
+}
+
+.pageHeaderSlogan {
+	text-align: center;
+	padding-left: 6em;
+	padding-bottom: 1em;
+	font-family: 'Caveat', cursive;
+	/*font-style: italic;*/
+}
+
+.banner {
+	padding-bottom: 1.5em;
 }
 
 .otisHeader {
@@ -23,6 +44,7 @@
 	padding-left: 9.7em;
 	padding-right: 1em;
 	font-size: 1.4em;
+	font-family: 'Boogaloo', cursive;
 }
 
 .homeObject {
@@ -31,8 +53,9 @@
 }
 
 .homeImage {
-    width: auto;
-    height: 18em;
+    width: 22em;
+    height: 19em;
     border-radius: 25%;
 /*	opacity: 0.5;*/
 }
+

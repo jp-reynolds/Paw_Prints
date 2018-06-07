@@ -5,7 +5,7 @@ import './Header.css';
 class Header extends Component {
   render() {
 	return (
-		<Navbar inverse collapseOnSelect>
+		<Navbar inverse collapseOnSelect className="navibar">
 			<Navbar.Header>
 				<Navbar.Brand>
 					<a href="/"><i className="fas fa-paw"></i> Paw Prints</a>

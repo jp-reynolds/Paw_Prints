@@ -2,6 +2,21 @@
 	padding-right: .35em;
 }
 
-/*.navbar-nav>li>a {
-	padding-top: 1.25em;
-}*/
+.navibar {
+	font-family: 'Architects Daughter', cursive;
+	color: white;
+	background-color: black;
+	border-color: black;
+}
+
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+button.navbar-toggle.collapsed {
+	border-color: black;
+}

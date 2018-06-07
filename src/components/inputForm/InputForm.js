@@ -102,9 +102,9 @@ class InputForm extends Component {
 
     return (
     	<div>
-        <hr/>
-        <div>
-          <h4 className="addNewText">Share your travels here... </h4>
+      
+        <div className="addNew">
+          <h4 className="addNewText">Share your favorite spots here... </h4>
           <Button className="addNewButton" bsStyle="info" bsSize="medium" onClick={this.handleShow}>
             Add new spot!
           </Button>
