@@ -15,33 +15,34 @@ class Home extends Component {
   			   <img className="pageHeaderLogo" src="https://i.imgur.com/kBBiAwy.jpg" /> Paw Prints
 		      </h1>
 			   <h4 className="pageHeaderSlogan">Never leave your pup at home</h4>
-        	<Image responsive className="banner" src="https://i.imgur.com/1YXduuB.jpg"/>
-
-
+        	<Image responsive className="banner" src="https://i.imgur.com/y7CVnQa.jpg"/>
+          <p className="description">Here in Colorado, dogs are allowed in many public places but when it comes to the great outdoors there can be a bit more restrictions.  Paw Prints is a place where people can share their favorite dog-friendly locations.</p>
+          <hr/>
          <InputForm/>
-         
-
-         <div className="links">
-            <a className="homeObject" href='/park'>
-                <div className="buttonContainer">
-                  <Image className="homeImage" id="park" src="https://i.imgur.com/TW6Hz8J.jpg?1" />
-                  <h1 className="centered"> Parks</h1>
-                </div>
-            </a>
-            <a className="homeObject" href='/hike'>
-              <div className="buttonContainer">
-                <Image className="homeImage" id="hike" src="https://i.imgur.com/1YXduuB.jpg" />
-                <h1 className="centered"> Hikes</h1>
-              </div>
-            </a>
-            <a className="homeObject" href='/camp'>
-              <div className="buttonContainer">
-                <Image className="homeImage" id="camp" src="https://i.imgur.com/Ul81qaF.jpg" />
-                <h1 className="centered"> Camp</h1>
-              </div>
-            </a>
+      
+         <div className="">
+          <h2 className="titlePlace">Parks</h2>
+          <a href="/park"><Image className="bannerPlace" src="https://i.imgur.com/O7cws4K.jpg" responsive /></a>
          </div>
-         
+
+         <div className="">
+          <h2 className="titlePlace">Hikes</h2>
+          <a href="/hike"><Image className="bannerPlace" src="https://i.imgur.com/9E6Fyby.jpg" responsive /></a>
+         </div>
+
+         <div className="bottomPlace">
+          <h2 className="titlePlace">Camping Spots</h2>         
+          <a href="/camp"><Image className="bannerPlace" src="https://i.imgur.com/Ul81qaF.jpg" responsive /></a>
+         </div>
+
+         <div className="otisHeader">
+          <Image className="otisPicture" src="https://i.imgur.com/OVqUxJS.jpg?1" responsive />
+          <h5 className="otisText">"Hey everyone! My name is Otis and my owner created this site so pups like me can play outside too! Please share your favorite places that get that tail wagging!"</h5>
+         </div>
+      
+         <footer id="footer">
+           <h5>Created by JP & Otis</h5>
+         </footer>
     	</div>
     );
   }

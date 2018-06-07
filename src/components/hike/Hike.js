@@ -41,7 +41,7 @@ class Hike extends Component {
 
     return (
     	<div className="parkContainer">
-        <h3 className="hikeTitle">Hike page.</h3>
+        <h1 className="hikeTitle">Hike</h1>
         <ul className="hikeList">{listOfHikes}</ul>
         <InputForm/>
       </div>

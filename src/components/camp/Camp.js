@@ -41,7 +41,7 @@ class Camp extends Component {
 
     return (
     	<div className="parkContainer">
-        <h3 className="campTitle">Camp page.</h3>
+        <h1 className="campTitle">Camp</h1>
         <ul className="campList">{listOfCamps}</ul>
         <InputForm/>
       </div>

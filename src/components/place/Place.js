@@ -39,11 +39,11 @@ class Place extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="placeObject">
 				<img className="placeImage" src={this.props.image}/>
           <div className="placeText">
     				<h4 className="placeName">{this.props.name}</h4>
-    				<h5 className="placeCity">{this.props.city}</h5>
+    				<h4 className="place">{this.props.city}</h4>
             <h4 className="placeElevation">{this.props.elevation}</h4>
             <Weather 
               city={this.props.city}

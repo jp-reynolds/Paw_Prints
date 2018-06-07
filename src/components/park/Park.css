@@ -4,6 +4,9 @@ ul {
 
 .parkTitle {
 	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	font-weight: bold;
+	padding-bottom: .5em;
 }
 
 .parkList {

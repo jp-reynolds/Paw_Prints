@@ -1,6 +1,7 @@
-/*.addnew {
-	padding-top: 1em;
-}*/
+.addNew {
+	float: right;
+	padding-right: 1.5em;
+}
 
 .addNewText {
 	padding-top: 0.5em;
@@ -12,5 +13,10 @@
 .addNewButton {
 	float: left;
 	margin-left: 1em;
-	margin-bottom: 2em;
+}
+
+.btn {
+	background-color: black;
+	border-color: black;
+	color: white;
 }

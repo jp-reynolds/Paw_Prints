@@ -1,3 +1,8 @@
+.placeObject {
+	padding-left: 1.75em;
+	padding-right: 1em;
+}
+
 .placeImage {
 	width: 10em;
     height: 10em;
@@ -5,11 +10,22 @@
     float: left;
 }
 
+.placeName {
+	padding-top: 1em;
+}
+
+h4.place {
+	padding-bottom: .7em;
+}
+
+.placeElevation {
+	padding-bottom: 0;
+}
+
 .placeText {
 	float: left;
-	padding-left: 1em;
-	padding-top: .6em;
-
+	padding-left: 1.2em;
+	font-family: 'Boogaloo', cursive;
 }
 
 .placeDescription {
@@ -17,4 +33,6 @@
 	padding-top: .2em;
 	padding-right: .5em;
 	padding-left: .5em;
+	font-family: 'Nanum Gothic', sans-serif;
+
 }
