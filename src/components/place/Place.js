@@ -20,10 +20,6 @@ class Place extends Component {
 	    };
 	}
 
-
-
-
-
   componentDidMount(event){
       this.setState({
         currentlyEditing : false,

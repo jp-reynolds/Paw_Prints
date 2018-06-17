@@ -91,7 +91,8 @@ class InputForm extends Component {
       image: this.state.image
     } 
     console.log(newPlace);
-    axios.post("/api/places", newPlace).then(this.axiosCallback);
+    //https://dogadventure.herokuapp.com/api/places
+    axios.post("https://dogadventure.herokuapp.com/api/places", newPlace).then(this.axiosCallback);
   }
 
   axiosCallback(results) {

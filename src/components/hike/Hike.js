@@ -17,7 +17,8 @@ class Hike extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("/api/places/hike").then((results) => {
+		//https://dogadventure.herokuapp.com/api/places/hike
+		axios.get("https://dogadventure.herokuapp.com/api/places/hike").then((results) => {
 			this.setState({
 				places: results
 			});

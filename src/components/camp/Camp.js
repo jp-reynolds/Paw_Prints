@@ -17,7 +17,8 @@ class Camp extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("/api/places/camp").then((results) => {
+		//https://dogadventure.herokuapp.com/api/places/camp
+		axios.get("https://dogadventure.herokuapp.com/api/places/camp").then((results) => {
 			this.setState({
 				places: results
 			});

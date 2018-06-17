@@ -17,7 +17,8 @@ class Park extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("/api/places/park").then((results) => {
+		//https://dogadventure.herokuapp.com/api/places/park
+		axios.get("https://dogadventure.herokuapp.com/api/places/park").then((results) => {
 			this.setState({
 				places: results
 			});
