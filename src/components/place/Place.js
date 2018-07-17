@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Place.css';
 import axios from 'axios';
 import Weather from '../weather/Weather';
+import Voter from '../voter/Voter';
 
 
 
@@ -36,15 +37,18 @@ class Place extends Component {
 	render() {
 		return (
 			<div className="placeObject">
+        <Voter
+          likes={this.props.likes}
+          dislikes={this.props.dislikes}
+        />
 				<img className="placeImage" src={this.props.image}/>
-          <div className="placeText">
-    				<h4 className="placeName">{this.props.name}</h4>
-    				<h4 className="place">{this.props.city}</h4>
-            <h4>Likes:{this.props.likes} Dislikes: {this.props.dislikes}</h4>
-            <Weather 
-              city={this.props.city}
-            />
-          </div>
+        <div className="placeText">
+    			<h4 className="placeName">{this.props.name}</h4>
+    			<h4 className="place">{this.props.city}</h4>
+          <Weather 
+            city={this.props.city}
+          />
+        </div>
 				<p className="placeDescription">{this.props.description}</p>
         <hr/>
 			</div>
