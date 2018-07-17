@@ -40,7 +40,7 @@ class Place extends Component {
           <div className="placeText">
     				<h4 className="placeName">{this.props.name}</h4>
     				<h4 className="place">{this.props.city}</h4>
-            <h4 className="placeElevation">{this.props.elevation}</h4>
+            <h4>Likes:{this.props.likes} Dislikes: {this.props.dislikes}</h4>
             <Weather 
               city={this.props.city}
             />

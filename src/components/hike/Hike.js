@@ -30,6 +30,8 @@ class Hike extends Component {
   	let listOfHikes = this.state.places.data.map((hikeObject, index) => {
   		return  <li className="hikeObject" key = {index}>
   					<Place
+  						likes={hikeObject.likes}
+  						dislikes={hikeObject.dislikes}
 	  					name={hikeObject.name}
 	  					city={hikeObject.city}
 	  					description={hikeObject.description}

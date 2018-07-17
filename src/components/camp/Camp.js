@@ -30,6 +30,8 @@ class Camp extends Component {
   	let listOfCamps = this.state.places.data.map((campObject, index) => {
   		return  <li className="campObject" key = {index}>
   					<Place
+  						likes={campObject.likes}
+  						dislikes={campObject.dislikes}
 	  					name={campObject.name}
 	  					city={campObject.city}
 	  					description={campObject.description}
