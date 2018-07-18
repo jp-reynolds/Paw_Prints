@@ -24,12 +24,12 @@ class Voter extends Component {
 		return (
 			<div className="votes">
         <ul>
-          <li className="glyphicon glyphicon-arrow-up">
-            <p>{this.props.likes}</p>
-          </li>
-          <li className="glyphicon glyphicon-arrow-down">
-            <p>{this.props.dislikes}</p>
-          </li> 
+          <p id="upArrow" className="glyphicon glyphicon-arrow-up">
+            {this.props.likes}
+          </p>
+          <p id="downArrow" className="glyphicon glyphicon-arrow-down">
+            {this.props.dislikes}
+          </p> 
         </ul>
 			</div>
 

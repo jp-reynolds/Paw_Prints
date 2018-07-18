@@ -1,7 +1,15 @@
 .votes {
+	padding-top: 1.75em;
 	float: left;
 }
 
-.glyphicon-arrow-up {
-	padding-right: 20px;
+#upArrow {
+	font-size: 2.35em;
+	color: green;
+}
+
+#downArrow {
+	font-size: 2.35em;
+	display: block;
+	color: red;
 }
