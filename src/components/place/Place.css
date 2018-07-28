@@ -1,6 +1,6 @@
 ul {
 	padding-left: 0;
-	padding-right: .4em;
+	padding-right: 0;
 }
 
 .placeObject {
@@ -15,7 +15,7 @@ ul {
 
 .placeName {
 	padding-top: 1.3em;
-	font-size: 1.7em;
+	font-size: 1.5em;
 }
 
 h4.place {
@@ -28,7 +28,7 @@ h4.place {
 
 .placeText {
 	float: left;
-	padding-left: 1.2em;
+	padding-left: .6em;
 	font-family: 'Boogaloo', cursive;
 }
 
@@ -36,13 +36,13 @@ h4.place {
 	clear: both;
 	padding-top: .75em;
 	padding-right: .5em;
-	padding-left: .75em;
+	padding-left: 1.5em;
 }
 
 .descriptionText {
 	font-family: 'Nanum Gothic', sans-serif;
 	float: left;
-	padding-right: 3em;
+	padding-right: 2.3em;
 }
 
 .descriptionButton {

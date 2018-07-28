@@ -40,6 +40,7 @@ class Park extends Component {
 	  					comments={[parkObject.comments]}
 	  				/>
 				</li>
+
   	})
 
     return (
