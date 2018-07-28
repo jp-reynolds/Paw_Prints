@@ -3,6 +3,7 @@ import './Place.css';
 import axios from 'axios';
 import Weather from '../weather/Weather';
 import Voter from '../voter/Voter';
+import { Button } from 'react-bootstrap';
 
 
 
@@ -49,7 +50,10 @@ class Place extends Component {
             city={this.props.city}
           />
         </div>
-				<p className="placeDescription">{this.props.description}</p>
+        <div className="placeDescription">
+          <p className="descriptionText">{this.props.description} <Button className="descriptionButton"></Button></p>
+          
+        </div>
         <hr/>
 			</div>
 

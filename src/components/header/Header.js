@@ -23,6 +23,9 @@ class Header extends Component {
 				<NavItem eventKey={3} href="/camp">
 					<p className="glyphicon glyphicon-tent"></p>Camp
 				</NavItem>
+				<NavItem eventKey={4} href="/store">
+					<p className="glyphicon glyphicon-shopping-cart"></p>Store
+				</NavItem>
 			</Nav>
 			</Navbar.Collapse>
 		</Navbar>

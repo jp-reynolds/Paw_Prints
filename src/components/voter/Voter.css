@@ -1,15 +1,17 @@
 .votes {
-	padding-top: 1.75em;
+	padding-top: 2.6em;
 	float: left;
 }
 
 #upArrow {
-	font-size: 2.35em;
+	font-size: 2em;
 	color: green;
+	padding-left: .2em;
 }
 
 #downArrow {
-	font-size: 2.35em;
+	font-size: 2em;
 	display: block;
 	color: red;
+	padding-left: .2em;
 }
