@@ -4,49 +4,41 @@ ul {
 }
 
 .placeObject {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
 .placeImage {
 	width: 10em;
     height: 10em;
-    border-radius: 20%;
-    float: left;
+    border-radius: 17%;
+
 }
 
 .placeName {
-	padding-top: 1.3em;
+/*	padding-top: 1.3em;*/
 	font-size: 1.5em;
 }
 
-h4.place {
-	padding-bottom: .5em;
+.placeCity {
+/*	padding-bottom: .5em;*/
 }
 
-.placeElevation {
-	padding-bottom: 0;
-}
-
-.placeText {
-	float: left;
-	padding-left: .6em;
+.placeTitle {
+/*	padding-left: .6em;*/
 	font-family: 'Boogaloo', cursive;
+	display: grid;
 }
 
 .placeDescription {
-	clear: both;
-	padding-top: .75em;
+/*	padding-top: .75em;
 	padding-right: .5em;
-	padding-left: 1.5em;
+	padding-left: 1.5em;*/
+	grid-column: 1/4;
 }
 
 .descriptionText {
 	font-family: 'Nanum Gothic', sans-serif;
-	float: left;
-	padding-right: 2.3em;
+/*	padding-right: 2.3em;*/
 }
 
-.descriptionButton {
-	float: right;
-	height: 1.5em;
-	width: 1em;
-}

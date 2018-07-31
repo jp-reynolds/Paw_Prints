@@ -23,7 +23,7 @@ class Voter extends Component {
 	render() {
 		return (
 			<div className="votes">
-        <ul>
+        <ul className="votes">
           <p id="upArrow" className="glyphicon glyphicon-arrow-up">
             {this.props.likes}
           </p>

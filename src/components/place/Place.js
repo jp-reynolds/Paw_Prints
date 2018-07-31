@@ -38,23 +38,22 @@ class Place extends Component {
 	render() {
 		return (
 			<div className="placeObject">
-        <Voter
-          likes={this.props.likes}
-          dislikes={this.props.dislikes}
-        />
-				<img className="placeImage" src={this.props.image}/>
-        <div className="placeText">
-    			<h4 className="placeName">{this.props.name}</h4>
-    			<h4 className="place">{this.props.city}</h4>
-          <Weather 
+				  <img className="placeImage" src={this.props.image}/>
+          <div className="placeTitle">
+      			 <h4 className="placeName">{this.props.name}</h4>
+      			 <h4 className="placeCity">{this.props.city}</h4>
+             <Weather 
             city={this.props.city}
+           />
+          </div>
+          
+          <Voter
+            likes={this.props.likes}
+            dislikes={this.props.dislikes}
           />
-        </div>
-        <div className="placeDescription">
-          <p className="descriptionText">{this.props.description} 
-            
-          </p>
-        </div>
+          <div className="placeDescription">
+            <p className="descriptionText">{this.props.description}</p>
+          </div>
 			</div>
 		)
 	}

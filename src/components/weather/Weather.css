@@ -2,3 +2,11 @@ h4 {
 	margin: 0em 0em;
 	line-height: 1em;
 }
+
+#weatherContainer {
+	width: 70%;
+}
+
+#weather {
+	width: 70%;
+}
