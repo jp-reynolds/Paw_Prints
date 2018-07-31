@@ -14,7 +14,7 @@ class Weather extends Component {
 
 	componentDidMount() {
     //https://marvelcu.herokuapp.com/api/heroes
-		axios.get("http://api.openweathermap.org/data/2.5/weather?q=" + this.props.city + ",us&appid=63623588dafef4755b03ceb8eaa78ed9&units=imperial").then((results) => {
+		axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + this.props.city + ",us&appid=63623588dafef4755b03ceb8eaa78ed9&units=imperial").then((results) => {
 			let tempCity = results.data.main.temp
 			let iconCity = results.data.weather[0].icon
 			this.setState({
@@ -34,7 +34,7 @@ class Weather extends Component {
 
     return (
     	<div className="weatherContainer">
-        	<h4 id="weather">{tempCity}˚ <img src={"http://openweathermap.org/img/w/" + iconCity + ".png"}/></h4>
+        	<h4 id="weather">{tempCity}˚ <img src={"https://openweathermap.org/img/w/" + iconCity + ".png"}/></h4>
         </div>
     );
   }
