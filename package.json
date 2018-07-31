@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build https://pawprints.surge.sh"
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build pawprints.surge.sh"
   },
   "proxy": "http://localhost:8080/"
 }
