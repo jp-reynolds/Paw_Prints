@@ -12,18 +12,20 @@ ul {
 	width: 10em;
     height: 10em;
     border-radius: 17%;
+    margin-right: 0.4em;
 
 }
 
 .placeName {
-/*	padding-top: 1.3em;*/
 	font-size: 1.56em;
 	justify-self: center;
+	text-align: center;
 }
 
 .placeCity {
 	margin-top: 0;
 	justify-self: center;
+	text-align: center;
 }
 
 .placeTitle {
@@ -33,14 +35,15 @@ ul {
 }
 
 .placeDescription {
-/*	padding-top: .75em;
-	padding-right: .5em;
-	padding-left: 1.5em;*/
 	grid-column: 1/4;
+	justify-self: center;
 }
 
 .descriptionText {
 	font-family: 'Nanum Gothic', sans-serif;
-/*	padding-right: 2.3em;*/
+/*	padding-top: 0.3em;
+	padding-left: 0.2em;
+	padding-right: 5em;*/
+/*	padding-bottom: 1em;*/
 }
 

@@ -1,3 +1,8 @@
 .weatherContainer {
 	justify-self: center;
 }
+
+#weather {
+	margin-top: 0;
+	text-align: center;
+}

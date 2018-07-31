@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { PageHeader, Image } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
 import InputForm from '../inputForm/InputForm'
 import './Home.css'
 

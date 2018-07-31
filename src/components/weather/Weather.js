@@ -27,7 +27,6 @@ class Weather extends Component {
 
   render() {
 
-  	let city = this.props.city
   	let tempCity = this.state.tempCity
   	let iconCity = this.state.iconCity
 

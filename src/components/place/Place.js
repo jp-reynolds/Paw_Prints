@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import './Place.css';
-import axios from 'axios';
 import Weather from '../weather/Weather';
 import Voter from '../voter/Voter';
-import { Button } from 'react-bootstrap';
-
 
 
 class Place extends Component {
@@ -37,24 +34,27 @@ class Place extends Component {
 
 	render() {
 		return (
-			<div className="placeObject">
-				  <img className="placeImage" src={this.props.image}/>
-          <div className="placeTitle">
-      			 <h4 className="placeName">{this.props.name}</h4>
-      			 <h4 className="placeCity">{this.props.city}</h4>
-             <Weather 
-            city={this.props.city}
-           />
-          </div>
-          
-          <Voter
-            likes={this.props.likes}
-            dislikes={this.props.dislikes}
-          />
-          <div className="placeDescription">
-            <p className="descriptionText">{this.props.description}</p>
-          </div>
-			</div>
+      <div>
+  			<div className="placeObject">
+  				  <img className="placeImage" src={this.props.image}/>
+            <div className="placeTitle">
+        			 <h4 className="placeName">{this.props.name}</h4>
+        			 <h4 className="placeCity">{this.props.city}</h4>
+               <Weather 
+              city={this.props.city}
+             />
+            </div>
+            
+            <Voter
+              likes={this.props.likes}
+              dislikes={this.props.dislikes}
+            />
+            <div className="placeDescription">
+              <p className="descriptionText">{this.props.description}</p>
+            </div>
+  			</div>
+        <hr/>
+      </div>
 		)
 	}
 }
