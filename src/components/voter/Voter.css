@@ -1,5 +1,6 @@
 .votes {
-
+	justify-self: center;
+	align-self: center;
 }
 
 #upArrow {

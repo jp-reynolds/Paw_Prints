@@ -79,7 +79,9 @@ class InputForm extends Component {
       name: this.state.name,
       city: this.state.city,
       description: this.state.description,
-      image: this.state.image
+      image: this.state.image,
+      likes: 0,
+      dislikes: 0
     } 
     console.log(newPlace);
     //https://dogadventure.herokuapp.com/api/places

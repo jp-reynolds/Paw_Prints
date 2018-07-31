@@ -17,11 +17,13 @@ ul {
 
 .placeName {
 /*	padding-top: 1.3em;*/
-	font-size: 1.5em;
+	font-size: 1.56em;
+	justify-self: center;
 }
 
 .placeCity {
-/*	padding-bottom: .5em;*/
+	margin-top: 0;
+	justify-self: center;
 }
 
 .placeTitle {
