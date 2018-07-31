@@ -20,3 +20,11 @@
 	border-color: black;
 	color: white;
 }
+
+#submitButton {
+	margin-left: 15em;
+}
+
+#closeButton {
+/*	clear: both;*/
+}

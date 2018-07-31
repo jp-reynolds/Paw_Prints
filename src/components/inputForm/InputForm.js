@@ -12,7 +12,6 @@ class InputForm extends Component {
         type: "",
         name: "",
         city: "",
-        elevation: "",
         description: "",
         image: "",
 	    };
@@ -22,7 +21,6 @@ class InputForm extends Component {
       this.typeChange = this.typeChange.bind(this);
       this.nameChange = this.nameChange.bind(this);
       this.cityChange = this.cityChange.bind(this);
-      this.elevationChange = this.elevationChange.bind(this);
       this.descriptionChange = this.descriptionChange.bind(this);
       this.imageChange = this.imageChange.bind(this);
       this.onFormModalSubmit = this.onFormModalSubmit.bind(this);
@@ -62,12 +60,6 @@ class InputForm extends Component {
     })
   }
 
-  elevationChange(event) {
-    this.setState({
-      elevation: event.target.value,
-    })
-  }
-
   descriptionChange(event) {
     this.setState({
       description: event.target.value,
@@ -86,17 +78,23 @@ class InputForm extends Component {
       type: this.state.type,
       name: this.state.name,
       city: this.state.city,
-      elevation: this.state.elevation,
       description: this.state.description,
       image: this.state.image
     } 
     console.log(newPlace);
     //https://dogadventure.herokuapp.com/api/places
     axios.post("https://dogadventure.herokuapp.com/api/places", newPlace).then(this.axiosCallback);
+    this.setState({
+        type: "",
+        name: "",
+        city: "",
+        description: "",
+        image: "",
+    });
   }
 
   axiosCallback(results) {
-    console.log(results);
+      console.log(results);
   }
 
   render() {
@@ -148,17 +146,6 @@ class InputForm extends Component {
                   />
                 </FormGroup>
 
-                <FormGroup>
-                  <ControlLabel>Elevation</ControlLabel>
-                  <FormControl
-                    type="text"
-                    value={this.state.elevation}
-                    placeholder="Enter elevation here..."
-                    onChange={this.elevationChange}
-                    name='elevation'
-                  />
-                </FormGroup>
-
                 <FormGroup controlId="formControlsTextarea">
                   <ControlLabel>Description</ControlLabel>
                   <FormControl 
@@ -181,11 +168,11 @@ class InputForm extends Component {
                   />
                 </FormGroup>
 
-                <Button type="submit">Submit</Button>
+                <Button id="submitButton" type="submit">Submit</Button>
               </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleClose}>Close</Button>
+            <Button id="closeButton" onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
 

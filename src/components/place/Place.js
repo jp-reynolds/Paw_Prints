@@ -52,16 +52,12 @@ class Place extends Component {
         </div>
         <div className="placeDescription">
           <p className="descriptionText">{this.props.description} 
-            <Button className="descriptionButton"></Button>
+            
           </p>
         </div>
-        <hr/>
-        <hr/>
 			</div>
-
 		)
 	}
-
 }
 
 export default Place;
